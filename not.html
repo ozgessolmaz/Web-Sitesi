@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Not Hesaplama</title>
+    <link rel="stylesheet" href="not.css">
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="notlar">
+            <h1 style="color:darkblue;">VİZE VE FİNAL NOTLARI</h1>
+            <div class="vize">
+                <input type="number" id="vize" placeholder="Vize notu %40 ">
+            </div>
+            <div class="final">
+                <input type="number" id="final" placeholder="Final notu %60 ">
+            </div>
+            <div class="butons">
+                <button id="hesapla" class="btn">HESAPLA</button>
+            </div>
+            <div class="sonuc">
+                <p id="ortalama">ORTALAMA</p>
+                <p id="ortharfNotAlma">HARF NOTU</p>
+            </div>
+
+        </div>
+    </div>
+    <div id="altnavbar">
+        <a href="index.html" class="anasayfa-button">ANASAYFA</a>
+        <a href="Hakkımda.html" class="hakkımda-button">HAKKIMDA</a>
+    </div>
+    <script>
+        let vize = document.getElementById("vize");
+        let final = document.getElementById("final");
+        let btnHesapla = document.getElementById("hesapla");
+        let ortalama = document.getElementById("ortalama");
+        let harfNot = document.getElementById("ortharfNotAlma");
+
+        btnHesapla.addEventListener("click", () => {
+            let vizeTxt = vize.value;
+            let finalTxt = final.value;
+
+            let sonuc = Math.round(vizeTxt * 0.40) + (finalTxt * 0.60);
+
+            if (sonuc >= 90 && sonuc <= 100) {
+                ortalama.innerText = 'Ortalamanız:' + sonuc;
+                harfNot.innerText = 'AA';
+                harfNot.style.backgroundColor = 'purple';
+            } else if (sonuc >= 85 && sonuc <= 89) {
+                ortalama.innerText = 'Ortalamanız:' + sonuc;
+                harfNot.innerText = 'BA';
+                harfNot.style.backgroundColor = 'purple';
+            } else if (sonuc >= 75 && sonuc <= 84) {
+                ortalama.innerText = 'Ortalamanız:' + sonuc;
+                harfNot.innerText = 'BB';
+                harfNot.style.backgroundColor = 'purple';
+            } else if (sonuc >= 70 && sonuc <= 74) {
+                ortalama.innerText = 'Ortalamanız:' + sonuc;
+                harfNot.innerText = 'CB';
+                harfNot.style.backgroundColor = 'purple';
+            } else if (sonuc >= 60 && sonuc <= 69) {
+                ortalama.innerText = 'Ortalamanız:' + sonuc;
+                harfNot.innerText = 'CC';
+                harfNot.style.backgroundColor = 'purple';
+            } else if (sonuc >= 55 && sonuc <= 59) {
+                ortalama.innerText = 'Ortalamanız:' + sonuc;
+                harfNot.innerText = 'DC';
+                harfNot.style.backgroundColor = 'purple';
+            } else if (sonuc >= 50 && sonuc <= 54) {
+                ortalama.innerText = 'Ortalamanız:' + sonuc;
+                harfNot.innerText = 'DD';
+                harfNot.style.backgroundColor = 'red';
+            } else if (sonuc >= 40 && sonuc <= 49) {
+                ortalama.innerText = 'Ortalamanız:' + sonuc;
+                harfNot.innerText = 'FD';
+                harfNot.style.backgroundColor = 'crimson';
+            } else {
+                ortalama.innerText = 'Ortalamanız:' + sonuc;
+                harfNot.innerText = 'FF';
+                harfNot.style.backgroundColor = 'crimson';
+            }
+
+        })
+
+
+
+        /* 90-100  AA
+        85-89   BA
+        75-84   BB
+        70-74   CB
+        60-69   CC
+        55-59   DC
+        50-54   DD
+        40-49   FD
+        0-39    FF  
+        */
+    </script>
+
+</body>
+
+</html>

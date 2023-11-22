@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: bisque;
+}
+
+img {
+    padding-left: 50px;
+    padding-top: 80px;
+    width: 350px;
+    height: 350px;
+    display: flex;
+}
+
+p {
+    margin-top: 200px;
+}
+
+.anasayfa-button {
+    display: inline-block;
+    padding: 12px 24px;
+    display: inline-block;
+    color: white, ;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 56px;
+    margin-top: 20px;
+    transition: all .25s ease;
+    margin-left: 700px;
+}
+
+.anasayfa-button {
+    background-color: red;
+    color: white;
+    &:hover {
+        background-color: rebeccapurple;
+    }
+}
+
+.not-button {
+    display: inline-block;
+    padding: 12px 24px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 56px;
+    margin-top: 20px;
+    transition: all .25s ease;
+}
+
+.not-button {
+    background-color: red;
+    color: white;
+    &:hover {
+        background-color: rebeccapurple;
+    }
+}
+
+#orta {
+    display: flex;
+}
+
+.iletisim-button {
+    display: inline-block;
+    padding: 12px 24px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 56px;
+    margin-top: 20px;
+    transition: all .25s ease;
+}
+
+.iletisim-button {
+    background-color: red;
+    color: white;
+    &:hover {
+        background-color: rebeccapurple;
+    }
+}
